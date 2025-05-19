@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import PostContext from './contexts/PostContexts';
+import PostsPage from './components/PostsPage';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <PostContext.Provider>
-        <h1>Ciao</h1>
+        <PostsPage />
       </PostContext.Provider>
     </>
   )
