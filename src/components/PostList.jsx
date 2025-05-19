@@ -1,5 +1,6 @@
 import { useContext } from "react"
 
+import PostCard from "./PostCard";
 import PostContext from "../contexts/PostContexts"
 
 function PostList() {
@@ -9,9 +10,7 @@ function PostList() {
   return (
     <div>
         {posts.map((post) => (
-            <div key={`post-${post.id}`}>
-                <p>{post.title}</p>
-            </div>
+            <PostCard key={`post-${post.id}`} post={post} /> 
         ))}
     </div>
   )
