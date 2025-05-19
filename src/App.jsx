@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import PostContext from './contexts/PostContexts';
+
 function App() {
 
   const posts = [
@@ -11,7 +13,9 @@ function App() {
 
   return (
     <>
-      <h1>Ciao</h1>
+      <PostContext.Provider>
+        <h1>Ciao</h1>
+      </PostContext.Provider>
     </>
   )
 }
