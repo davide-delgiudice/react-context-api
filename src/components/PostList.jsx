@@ -2,11 +2,18 @@ import { useContext } from "react"
 
 import PostContext from "../contexts/PostContexts"
 
-const PostList = () => {
+function PostList() {
+
+    const posts = useContext(PostContext);
 
   return (
-    <div>PostList</div>
-
+    <div>
+        {posts.map((post) => (
+            <div key={`post-${post.id}`}>
+                <p>{post.title}</p>
+            </div>
+        ))}
+    </div>
   )
 }
 
