@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <PostContext.Provider>
+      <PostContext.Provider value={posts}>
         <PostsPage />
       </PostContext.Provider>
     </>
